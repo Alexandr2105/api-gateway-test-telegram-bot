@@ -1,0 +1,26 @@
+{
+  "name": "api-gateway-test-telegram-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "nodemon dist/index.js",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "ngrok:dev": "ngrok http 3000"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "axios": "^1.6.7",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "ngrok": "^5.0.0-beta.2"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.5",
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.0"
+  }
+}
