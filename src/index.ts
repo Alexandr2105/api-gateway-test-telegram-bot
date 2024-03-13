@@ -26,5 +26,6 @@ async function start() {
     await telegramAdapter.sendOurHookForTelegram(
         baseUrl + '/telegram/webhook',
     );
+    console.log(baseUrl + '/telegram/webhook')
 }
 start();
