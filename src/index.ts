@@ -3,7 +3,7 @@ import {settings} from "./settings";
 import {TelegramAdapter} from "./adapters/telegramAdapter/telegram.adapter";
 import {telegramBotRouter} from "./routers/telegram.bot.route";
 const app = express();
-const port = settings.PORT;
+// const port = settings.PORT;
 
 app.use(express.json());
 
@@ -13,9 +13,9 @@ app.get('/', (req: Request, res: Response) => {
     res.send('Hello, World!');
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Example app listening on port ${port}`);
+// });
 
 async function start() {
     let baseUrl = settings.CURRENT_APP_BASE_URL;
@@ -26,6 +26,5 @@ async function start() {
     await telegramAdapter.sendOurHookForTelegram(
         baseUrl + '/telegram/webhook',
     );
-    console.log(baseUrl + '/telegram/webhook')
 }
 start();
